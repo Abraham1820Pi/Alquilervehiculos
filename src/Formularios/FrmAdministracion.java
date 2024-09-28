@@ -105,6 +105,9 @@ public class FrmAdministracion extends javax.swing.JFrame {
         BotonRegistrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableListaAlquiler = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenuUsuario = new javax.swing.JMenu();
+        menuCerrarSesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -149,6 +152,20 @@ public class FrmAdministracion extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(tableListaAlquiler);
+
+        jMenuUsuario.setText("Usuario");
+
+        menuCerrarSesion.setText("Cerrar Sesion");
+        menuCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCerrarSesionActionPerformed(evt);
+            }
+        });
+        jMenuUsuario.add(menuCerrarSesion);
+
+        jMenuBar1.add(jMenuUsuario);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -282,6 +299,13 @@ public class FrmAdministracion extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BotonRegistrarActionPerformed
 
+    private void menuCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        FrmLogin Login = new FrmLogin();
+        Login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_menuCerrarSesionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -302,7 +326,10 @@ public class FrmAdministracion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuUsuario;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem menuCerrarSesion;
     private javax.swing.JTextField nArrendador;
     private javax.swing.JTextField nArrendatario;
     private javax.swing.JTextField plVehiculo;
